@@ -13,3 +13,7 @@ I think I moved some files around since the last commit.
 **************
 
 Also see readme.txt.  
+
+Maybe some decade I will remember this command.  If I keep putting it in every project, maybe that will help:
+
+git remote set-url origin git@github.com:kwynncom/todo-list-arbitrary-drag.git
