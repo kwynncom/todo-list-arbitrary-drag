@@ -3,6 +3,12 @@ very beginnings of a to do list web app
 
 https://kwynn.com/t/20/06/todo/  - running at, although this version will probably get behind for a while.
 
+******
+same day, 11:54pm
+
+I have create and update going in the database, by user id.  
+
+
 *****
 2020/07/15 23:01pm - combining with https://github.com/kwynncom/generic-php-login
 

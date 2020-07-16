@@ -8,16 +8,8 @@ function send(obin) {
     
     XHR.open('GET', burl + '?' + serialize(obin));
     
-    XHR.onreadystatechange = function() {
-	try {
-	    if (this.readyState === 4 && this.status === 200) {
-	    }
-	    if (this.status !== 200) {
-		// byid('msgs').innerHTML = XHR.response;
-	    }
-	}    catch(err) {
-	// byid('msgs').innerHTML = err + XHR.response;
-	}
+    XHR.onloadend = function() {
+	byid('msgs').innerHTML = this.responseText;
     };
     
     XHR.send();
