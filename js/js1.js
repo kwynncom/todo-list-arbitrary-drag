@@ -1,7 +1,13 @@
 class kwtitem {
     itemele; crets; type;
-    constructor() { 
-	this.crets = new Date().getTime();
+    constructor(iin) { 
+	
+	this.initv = false;
+	
+	if (iin) {
+		 this.initv = iin;
+		 this.crets = iin.id; }
+	else     this.crets = new Date().getTime();
 	this.create(); 
     }
     register() {
@@ -21,7 +27,7 @@ class kwtitem {
 	new kwTodoDrag(this, nele, this.onDragStart, this.onDrop);
 	byid('divBase1').append(nele);	// abstract this
 	
-	const tob = new kwtodoItTitle(this.crets);
+	const tob = new kwtodoItTitle(this.crets, this.initv);
 	nele.append(tob.getEle());
     }
     onDragStart() { this.itemele.style.position = 'absolute'; }

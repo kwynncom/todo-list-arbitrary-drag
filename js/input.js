@@ -6,13 +6,16 @@ class kwtodoItTitle {
     
     too;
     
-    constructor(pid) {
+    constructor(pid, initv) {
 	this.pid = pid;
 	
 	const tele = cree('input');
 	tele.type = 'text';
 	this.type = 'itemTitle';
 	this.titele = tele;
+	
+	if (initv) tele.value = initv.v;
+	
 	const self = this;
 	tele.oninput = function() { self.oninput(self); }
     }

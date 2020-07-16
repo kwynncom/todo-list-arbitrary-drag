@@ -1,5 +1,7 @@
 <?php
 
+require_once('/opt/kwynn/kwutils.php');
+
 class dao_todo extends dao_generic {
         const db = 'todo';
 	function __construct() {
@@ -16,8 +18,10 @@ class dao_todo extends dao_generic {
 	    $res = $this->icoll->upsert(
 		    ['uid' => $dat['uid'], 'type' => $dat['type'], 'id' => $id], $dat
 		    );
-	    
-	    $x = 2;
+	}
+	
+	public function getByUID($uid) {
+	    return $this->icoll->find(['uid' => $uid], ['projection' => ['_id' => 0]])->toArray();
 	}
     
 }
