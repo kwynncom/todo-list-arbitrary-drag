@@ -1,0 +1,1 @@
+<?php echo 'reroute to index.php';

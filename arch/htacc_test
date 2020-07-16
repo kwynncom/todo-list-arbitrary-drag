@@ -1,0 +1,10 @@
+RewriteEngine On
+RewriteBase /todo/
+RewriteRule ^index\.php - [L]
+# RewriteCond %{REQUEST_FILENAME} !-f
+# RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /todo/index.php [L]
+
+# note that the server (Apache) level config has to have AllowOverride All or at least 
+# AllowOverride SomethingRelevant 
+# also something like 	Options SymLinksIfOwnerMatch   , also at the server level
