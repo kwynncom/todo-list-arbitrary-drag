@@ -17,20 +17,21 @@ class kwtodoItTitle {
 	if (initv) tele.value = initv.v;
 	
 	const self = this;
-	tele.oninput = function() { self.oninput(self); }
+	tele.oninput = function() { self.oninput(); }
     }
     
-    oninput(theob) { 
-	if (theob.too) clearTimeout(theob.too);
-	theob.too = setTimeout(function() { theob.oninputad(theob); }, 400); 
+    oninput() { 
+	if (this.too) clearTimeout(this.too);
+	const self = this;
+	this.too = setTimeout(function() { self.oninputad(); }, 400); 
     }
     
-    oninputad(theob) {
+    oninputad() {
 	const nob = {};
 	nob.crud = 'update';
-	nob.type = theob.type;
-	nob.id   = theob.pid;
-	nob.v    = theob.titele.value;
+	nob.type = this.type;
+	nob.id   = this.pid;
+	nob.v    = this.titele.value;
 	send(nob);
     }
     
